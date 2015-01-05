@@ -3,7 +3,7 @@
 	class Nerd extends Base {
 
 		public $name;
-		public $health = 100;
+		public $focus = 100;
 		public $level = 1;
 
 		public $nerdness = 25;
