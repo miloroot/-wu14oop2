@@ -2,5 +2,5 @@
 
 	class JavascriptNerd extends Nerd {
 
-		public $name;
+		public $nerdness = 14;
 	}
