@@ -13,5 +13,8 @@
 	$hotjs = new javascriptNerd ("Hot JavaScripter");
 
 	if(isset($_REQUEST["fight"])){
-		echo json_encode($hotjs->attack($designerGeek));
+		echo json_encode(
+			$hotjs->attack($designerGeek).''
+			.$designerGeek->name.' focus decreased to '.$designerGeek->focus.'.'
+		);
 	}

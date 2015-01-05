@@ -3,7 +3,7 @@
 	class Nerd extends Base {
 
 		public $name;
-		public $focus = 100;
+		public $focus = 50;
 		public $level = 1;
 
 		public $nerdness = 25;
@@ -20,11 +20,13 @@
 		}
 
 		public function isAlive() {
-			return $this->health > 0;
+			return $this->focus > 0;
 		}
 
 		public function attack(&$otherCharacter, $randomness = 1) {
-			return '<br>'.$this->name. ' nerds out on '. $otherCharacter->name. '!';
+			$this->focus += 10;
+			$otherCharacter->focus -= 10;
+			return '<br>'.$this->name. ' nerds out on '. $otherCharacter->name. '!'. '<br>';
 		}
 
 
