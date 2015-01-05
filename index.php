@@ -15,6 +15,7 @@
 	if(isset($_REQUEST["fight"])){
 		echo json_encode(
 			$hotjs->attack($designerGeek).''
-			.$designerGeek->name.' focus decreased to '.$designerGeek->focus.'.'
+			.$designerGeek->name.' focus decreased to '.$designerGeek->focus.'.'.'<br>'
+			.$hotjs->name.' focus increased to '.$hotjs->focus.'.'
 		);
 	}

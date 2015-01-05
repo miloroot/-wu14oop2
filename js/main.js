@@ -8,13 +8,22 @@ $(function() {
 			data: "fight",
 			dataType: "json",
 			success: function(data){
-				$('body').append(data);
+				$('.battleground').append(data);
 				console.log('Success:', data);
 			},
 			error: function(data){
 				console.log('Error: ', data);
 			}
 		});
+	});
+
+	$('.createChar').submit(function() {
+		var charName = $('.charName').val();
+		var charClass = $('.chooseClass').val();
+		
+		console.log(charName + ' - ' + charClass);
+
+		return false;
 	});
 
 })
