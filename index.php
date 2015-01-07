@@ -1,5 +1,15 @@
 <?php
 
+	//Nodebite black box
+	include_once("nodebite-swiss-army-oop.php");
+	$ds = new DBObjectSaver(array(
+	  "host" => "127.0.0.1",
+	  "dbname" => "character_db",
+	  "username" => "root",
+	  "password" => "mysql",
+	  "prefix" => "characters_trial"
+	));
+
 	// character/player classes
 	include_once("classes/base.class.php");
 	include_once("classes/nerd.class.php");
