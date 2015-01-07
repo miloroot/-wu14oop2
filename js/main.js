@@ -26,6 +26,10 @@ $(function() {
 		$('.confirmation').append('You chose the name: ' + charName + '.' + ' With the class: ' + charClass + '.<br>');
 		$('.confirmation').append('If this is correct. Click the button. <br> <button class="btn2">Confirm!</button>');
 
+		$('.btn2').click(function() {
+			console.log(charName + ' - ' + charClass + '. Via btn2.');
+		});
+
 		return false;
 	});
 
