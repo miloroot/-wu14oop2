@@ -9,7 +9,7 @@ $(function() {
 			dataType: "json",
 			success: function(data){
 				$('.battleground').append(data);
-				console.log('Success:', data);
+				console.log('Success: ', data);
 			},
 			error: function(data){
 				console.log('Error: ', data);
@@ -28,6 +28,24 @@ $(function() {
 
 		$('.btn2').click(function() {
 			console.log(charName + ' - ' + charClass + '. Via btn2.');
+
+			$.ajax({
+				url: "classes/challenge.class.php",
+				data: "getChallenge",
+				dataType: "json",
+				success: function(data){
+					console.log('Success: ', data);
+
+					$('.currentChallenge').append('You got the challenge: <br> ');
+					for (var i in data) {
+						$('.currentChallenge').append(data[i] + ' ' + '<br>');
+					}
+					$('.currentChallenge').append('<button class="btn3">Accept challenge!</button>');
+				},
+				error: function(data){
+					console.log('Error: ', data);
+				}
+			});
 		});
 
 		return false;

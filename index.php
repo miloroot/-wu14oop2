@@ -17,6 +17,9 @@
 	include_once("classes/designnerd.class.php");
 	include_once("classes/phpnerd.class.php");
 
+	// challenges
+	include_once("classes/challenge.class.php");
+
 	// items/tools classes
 
 	$designerGeek = new Nerd ("Designer Geek");
