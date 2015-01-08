@@ -4,7 +4,7 @@
 	include_once("nodebite-swiss-army-oop.php");
 	$ds = new DBObjectSaver(array(
 	  "host" => "127.0.0.1",
-	  "dbname" => "nerdbattle_db",
+	  "dbname" => " wu14oop2",
 	  "username" => "root",
 	  "password" => "mysql",
 	  "prefix" => "character"
@@ -18,6 +18,7 @@
 	include_once("classes/phpnerd.class.php");
 
 	// challenges
+	// all challenges are in this file, getting randomzied in the array
 	include_once("classes/challenge.class.php");
 
 	// items/tools classes
