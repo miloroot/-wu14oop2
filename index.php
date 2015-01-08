@@ -4,10 +4,10 @@
 	include_once("nodebite-swiss-army-oop.php");
 	$ds = new DBObjectSaver(array(
 	  "host" => "127.0.0.1",
-	  "dbname" => "character_db",
+	  "dbname" => "nerdbattle_db",
 	  "username" => "root",
 	  "password" => "mysql",
-	  "prefix" => "characters_trial"
+	  "prefix" => "character"
 	));
 
 	// character/player classes
