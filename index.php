@@ -24,10 +24,48 @@
 	// items/tools classes
 	// yet do be done...
 
-	// storing the characters
-	$designerGeek = new Nerd ("Designer Geek");
-	$hotjs = new javascriptNerd ("Hot JavaScripter");
+	// creating and storing the characters
 
-	if(isset($_REQUEST['create'])){
-		
+	// if user chooses allround nerd
+	if(isset($_REQUEST['nerd'])) {
+		if (count($ds->nerds) === 0) {
+			// input users values here - todo
+
+			$ds->nerds[] = new designNerd("Mr Doodler");
+			$ds->nerds[] = new phpNerd("PeeDeeOer");
+			$ds->nerds[] = new javascriptNerd("Hot Jeezer");
+		}
+	}
+
+	// if user chooses javascript nerd
+	if(isset($_REQUEST['javascriptNerd'])) {
+		if (count($ds->nerds) === 0) {
+			// input users values here - todo
+
+			$ds->nerds[] = new Nerd("5inch Glasses");
+			$ds->nerds[] = new phpNerd("Dumper");
+			$ds->nerds[] = new designNerd("Mr Pixels");
+		}
+	}
+
+	// if user chooses design nerd
+	if(isset($_REQUEST['designNerd'])) {
+		if (count($ds->nerds) === 0) {
+			// input users values here - todo
+
+			$ds->nerds[] = new Nerd("Tommy Two Tag");
+			$ds->nerds[] = new javascriptNerd("Sir Var-Alot");
+			$ds->nerds[] = new phpNerd("Fifty Shades Girl");
+		}
+	}
+
+	// if user chooses php nerd
+	if(isset($_REQUEST['phpNerd'])) {
+		if (count($ds->nerds) === 0) {
+			// input users values here - todo
+
+			$ds->nerds[] = new Nerd("John Table-Rocks Doe");
+			$ds->nerds[] = new javascriptNerd("Sir BugALot");
+			$ds->nerds[] = new designNerd("Gimp-a-fella");
+		}
 	}
