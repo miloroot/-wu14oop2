@@ -12,9 +12,9 @@
 		public $javascript = 25;
 		public $php = 25;
 
-		public function __construct($name, $class) {
+		public function __construct($name /*$class*/) {
 			$this->name = $name;
-			$this->class = $class;
+			//$this->class = $class;
 		}
 
 		public function get_name() {

@@ -34,6 +34,8 @@
 			$ds->nerds[] = new designNerd("Mr Doodler");
 			$ds->nerds[] = new phpNerd("PeeDeeOer");
 			$ds->nerds[] = new javascriptNerd("Hot Jeezer");
+
+			echo json_encode($ds->nerds->name);
 		}
 	}
 

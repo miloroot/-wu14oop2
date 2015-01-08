@@ -25,27 +25,64 @@ $(function() {
 		// sending values to PHP character creation
 		if (charClass == 'nerd') {
 			console.log('YEEEAAAAHHH!!!');
+			// ajax call for user choosing nerd
+			$.ajax({
+				url: "index.php",
+				data: "nerd",
+				dataType: "json",
+				success: function(data){
+					console.log('Success: ', data);
+				},
+				error: function(data){
+					console.log('Error: ', data);
+				}
+			});
 		}
 		else if (charClass == 'javascriptNerd') {
 			console.log('SUPER AWESOME!');
+			// ajax call for user choosing javascript nerd
+			$.ajax({
+				url: "index.php",
+				data: "javascriptNerd",
+				dataType: "json",
+				success: function(data){
+					console.log('Success: ', data);
+				},
+				error: function(data){
+					console.log('Error: ', data);
+				}
+			});
 		}
 		else if (charClass == 'desginNerd') {
 			console.log('I LIKE DESIGNZ!');
+			// ajax call for user choosing design nerd
+			$.ajax({
+				url: "index.php",
+				data: "designNerd",
+				dataType: "json",
+				success: function(data){
+					console.log('Success: ', data);
+				},
+				error: function(data){
+					console.log('Error: ', data);
+				}
+			});
 		}
 		else if (charClass == 'phpNerd') {
 			console.log('PHP IS MY WEAPONZ!');
+			// ajax call for user choosing php nerd
+			$.ajax({
+				url: "index.php",
+				data: "create",
+				dataType: "json",
+				success: function(data){
+					console.log('Success: ', data);
+				},
+				error: function(data){
+					console.log('Error: ', data);
+				}
+			});
 		}
-		/*$.ajax({
-			url: "index.php",
-			data: "create",
-			dataType: "json",
-			success: function(data){
-				console.log('Success: ', data);
-			},
-			error: function(data){
-				console.log('Error: ', data);
-			}
-		});*/
 
 		// confirm choice and get a random challenge
 		$('.btn2').click(function() {

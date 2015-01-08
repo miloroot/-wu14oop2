@@ -75,7 +75,7 @@ function decamelize($word) {
  * (but of course you should add constraints in 
  *  your get/set methods)
  */
-class Base {
+/*class Base {
 
   public function __get($name){
     return $this->{"get_".$name}();
@@ -89,7 +89,7 @@ class Base {
     return method_exists("get_".$name);
   }
 
-}
+}*/
 
 // --------------------------------------------------------------
 
