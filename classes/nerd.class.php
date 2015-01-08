@@ -3,6 +3,7 @@
 	class Nerd extends Base {
 
 		public $name;
+		public $class = "Allround nerd";
 		public $focus = 50;
 		public $level = 1;
 
@@ -11,12 +12,21 @@
 		public $javascript = 25;
 		public $php = 25;
 
-		public function __construct($name) {
+		public function __construct($name, $class) {
 			$this->name = $name;
+			$this->class = $class;
+		}
+
+		public function get_name() {
+			return $this->name;
+		}
+
+		public function get_class() {
+			return $this->class;
 		}
 
 		public function greet() {
-			return 'Hi, my name is '.$this->name. '!';
+			return 'Hi, my name is '.$this->name. '!'. ' And im a '.$this->class.'!';
 		}
 
 		public function isAlive() {

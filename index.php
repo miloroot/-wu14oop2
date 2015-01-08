@@ -22,14 +22,14 @@
 	include_once("classes/challenge.class.php");
 
 	// items/tools classes
+	// yet do be done...
 
+	// storing the characters
 	$designerGeek = new Nerd ("Designer Geek");
 	$hotjs = new javascriptNerd ("Hot JavaScripter");
 
 	if(isset($_REQUEST["fight"])){
 		echo json_encode(
-			$hotjs->attack($designerGeek).''
-			.$designerGeek->name.' focus decreased to '.$designerGeek->focus.'.'.'<br>'
-			.$hotjs->name.' focus increased to '.$hotjs->focus.'.'
+			
 		);
 	}
