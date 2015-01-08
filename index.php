@@ -28,8 +28,6 @@
 	$designerGeek = new Nerd ("Designer Geek");
 	$hotjs = new javascriptNerd ("Hot JavaScripter");
 
-	if(isset($_REQUEST["fight"])){
-		echo json_encode(
-			
-		);
+	if(isset($_REQUEST['create'])){
+		
 	}
