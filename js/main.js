@@ -1,34 +1,29 @@
 $(function() {
 
+	// check if jQuery and DOM is ready
 	console.log("Tis' working?");
 
-	$('.btn1').click(function() {
-		$.ajax({
-			url: "index.php",
-			data: "fight",
-			dataType: "json",
-			success: function(data){
-				$('.battleground').append(data);
-				console.log('Success: ', data);
-			},
-			error: function(data){
-				console.log('Error: ', data);
-			}
-		});
-	});
 
+	// grabbing the form info and values
 	$('.createChar').submit(function() {
 		var charName = $('.charName').val();
 		var charClass = $('.chooseClass').val();
 
+		// seeing if the values are working
 		console.log(charName + ' - ' + charClass);
 
+		// sending values to DOM
 		$('.confirmation').append('You chose the name: ' + charName + '.' + ' With the class: ' + charClass + '.<br>');
 		$('.confirmation').append('If this is correct. Click the button. <br> <button class="btn2">Confirm!</button>');
 
+		// sending values to PHP character creation
+		
+
+		// confirm choice and get a random challenge
 		$('.btn2').click(function() {
 			console.log(charName + ' - ' + charClass + '. Via btn2.');
 
+			// getting the random challenge
 			$.ajax({
 				url: "classes/challenge.class.php",
 				data: "getChallenge",
