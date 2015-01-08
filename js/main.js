@@ -12,12 +12,30 @@ $(function() {
 		// seeing if the values are working
 		console.log(charName + ' - ' + charClass);
 
+
 		// sending values to DOM
-		$('.confirmation').append('You chose the name: ' + charName + '.' + ' With the class: ' + charClass + '.<br>');
+		$('.confirmation').html('You chose the name: ' + charName + '.' + ' With the class: ' + charClass + '.<br>');
 		$('.confirmation').append('If this is correct. Click the button. <br> <button class="btn2">Confirm!</button>');
 
+		// if no name is chosen give error
+		if (charName.length <= 0) {
+			$('.confirmation').html('Please chose a name!');
+		}
+
 		// sending values to PHP character creation
-		$.ajax({
+		if (charClass == 'nerd') {
+			console.log('YEEEAAAAHHH!!!');
+		}
+		else if (charClass == 'javascriptNerd') {
+			console.log('SUPER AWESOME!');
+		}
+		else if (charClass == 'desginNerd') {
+			console.log('I LIKE DESIGNZ!');
+		}
+		else if (charClass == 'phpNerd') {
+			console.log('PHP IS MY WEAPONZ!');
+		}
+		/*$.ajax({
 			url: "index.php",
 			data: "create",
 			dataType: "json",
@@ -27,7 +45,7 @@ $(function() {
 			error: function(data){
 				console.log('Error: ', data);
 			}
-		});
+		});*/
 
 		// confirm choice and get a random challenge
 		$('.btn2').click(function() {
