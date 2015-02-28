@@ -101,6 +101,11 @@ $(function() {
 						$('.currentChallenge').append(data[i] + ' ' + '<br>');
 					}
 					$('.currentChallenge').append('<button class="btn3">Accept challenge!</button>');
+					// accept challenge button
+					$(document).on("click", '.btn3', function() {
+						alert("Hello, fine sir!");
+						
+					});
 				},
 				error: function(data){
 					console.log('Error: ', data);
