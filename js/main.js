@@ -103,8 +103,9 @@ $(function() {
 					$('.currentChallenge').append('<button class="btn3">Accept challenge!</button>');
 					// accept challenge button
 					$(document).on("click", '.btn3', function() {
-						alert("Hello, fine sir!");
-						
+
+						alert("Hello, sir! \nIn deep regret, I'm not done in time. \nThis task of creating a game in PHP just.. isn't (in my head) something for PHP. \nA Task of the kind of a blog or the likes would've been purrfect.");
+
 					});
 				},
 				error: function(data){
